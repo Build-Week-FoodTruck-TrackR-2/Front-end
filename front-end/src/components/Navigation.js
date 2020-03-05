@@ -12,6 +12,7 @@ const Navigation = () => {
     return (
         <NavLinks>
             <NavLink to="/"> Home </NavLink>
+            <NavLink to="/register"> Register </NavLink>
         </NavLinks>
     );
 };

@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import Navigation from "./components/Navigation"
 import WelcomePage from "./components/WelcomePage";
 import DriverLogin from "./components/DriverLogin";
+import Register from "./components/Register"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route exact path ='/' component = {WelcomePage} />
       <Route exact path ='/driver-login' component = {DriverLogin} />
       <Route exact path ='/diner-login' component = {WelcomePage} />
+      <Route exact path ='/register' component = {Register} />
     </main>
   );
 }
