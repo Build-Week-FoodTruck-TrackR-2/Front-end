@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 const LinkDiv = styled.div`
     display: flex;
@@ -21,10 +22,10 @@ export default function WelcomePage() {
     <section className="welcome-page">
       <LinkDiv>
           <div>
-              <h1>DRIVER LOGIN</h1>
+              <Link to = '/driver-login'>DRIVER LOGIN</Link>
           </div>
           <div>
-              <h1>DINER LOGIN</h1>
+              <Link to = '/diner-login'>DINER LOGIN</Link>
           </div>
       </LinkDiv>
     </section>
