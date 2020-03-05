@@ -9,24 +9,6 @@ export default function DriverLogin() {
 
     return (
         <form onSubmit ={handleSubmit(onSubmit)}>
-            <label>First Name</label>
-            <input 
-                name="firstName" 
-                ref={register({required:true})} 
-            />
-           
-            <label>Last Name</label>
-            <input 
-                name="lastName" 
-                ref={register({ required: true})} 
-            />
-            
-            <label>Email</label>
-            <input 
-                name="email" 
-                ref={register({ required: true})} 
-            />
-
             <label>Username</label>
             <input 
                 name="username" 
