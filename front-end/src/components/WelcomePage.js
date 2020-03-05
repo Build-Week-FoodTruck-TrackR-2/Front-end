@@ -30,7 +30,7 @@ export default function WelcomePage() {
               <StyledLink to = '/driver-login'>DRIVERS</StyledLink>
    
  
-              <StyledLink to = '/diner-login'>FOODIES</StyledLink>
+              <StyledLink to = '/foodie-login'>FOODIES</StyledLink>
  
       </LinkDiv>
     </section>
