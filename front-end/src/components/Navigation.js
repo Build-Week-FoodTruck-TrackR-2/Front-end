@@ -8,11 +8,18 @@ const NavLinks = styled.nav`
 
 `
 
+const StyledNavLink = styled(NavLink)`
+  color: palevioletred;
+  font-weight: bold;
+  text-decoration: none;
+`
+
+
 const Navigation = () => {
     return (
         <NavLinks>
-            <NavLink to="/"> Home </NavLink>
-            <NavLink to="/register"> Register </NavLink>
+            <StyledNavLink to="/"> Home </StyledNavLink>
+            <StyledNavLink to="/register"> Register </StyledNavLink>
         </NavLinks>
     );
 };

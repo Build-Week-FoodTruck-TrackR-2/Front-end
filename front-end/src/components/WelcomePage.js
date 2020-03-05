@@ -4,29 +4,34 @@ import {Link} from 'react-router-dom';
 
 const LinkDiv = styled.div`
     display: flex;
-    justify-content: space-around;
-`
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 25px 25px 25px
+`;
 
-const DriverLink = styled.div`
-    display: flex;
-    justify-content: space-around;
-`
-
-const DinerLink = styled.div`
-    display: flex;
-    justify-content: space-around;
+const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  align-items: center;
+  font-size: 4rem;
+  color: palevioletred;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  margin-top: 15px;
 `
 
 export default function WelcomePage() {
   return (
-    <section className="welcome-page">
+    <section className="welcome">
       <LinkDiv>
-          <div>
-              <Link to = '/driver-login'>DRIVER LOGIN</Link>
-          </div>
-          <div>
-              <Link to = '/diner-login'>DINER LOGIN</Link>
-          </div>
+         
+              <StyledLink to = '/driver-login'>DRIVERS</StyledLink>
+   
+ 
+              <StyledLink to = '/diner-login'>FOODIES</StyledLink>
+ 
       </LinkDiv>
     </section>
   );

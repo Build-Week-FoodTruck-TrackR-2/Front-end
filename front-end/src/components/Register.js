@@ -1,5 +1,19 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import styled from 'styled-components';
+
+
+const StyledForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    
+`;
+
+const StyledLabel = styled.label`
+    font-color: red;    
+`;
 
 export default function DriverLogin() {
     const { register, handleSubmit, watch, errors } = useForm()
@@ -8,8 +22,8 @@ export default function DriverLogin() {
     console.log(watch('example'))
 
     return (
-        <form onSubmit ={handleSubmit(onSubmit)}>
-            <label>First Name</label>
+        <StyledForm onSubmit ={handleSubmit(onSubmit)}>
+            <StyledLabel>First Name</StyledLabel>
             <input 
                 name="firstName" 
                 ref={register({required:true})} 
@@ -46,6 +60,6 @@ export default function DriverLogin() {
 
 
             < input type="submit"/>
-        </form>
+        </StyledForm>
     )
 }
