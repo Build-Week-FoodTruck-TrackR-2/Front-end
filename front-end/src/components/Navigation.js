@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const NavLinks = styled.nav`
     display: flex;
     justify-content: space-evenly;
+    margin-top: 1%;
 
 `
 

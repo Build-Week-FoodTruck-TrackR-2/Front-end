@@ -6,12 +6,38 @@ import axios from 'axios'
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 70%;
-`
+  margin-top: 25px;
+  padding: 0;
+  align-items: center;
 
-const StyledLabel = styled.label`
-  color: red;
-`
+    label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #6699cc;
+      font-size: 1.5rem;
+      margin: 5px 5px 0px 5px;
+      width: 50%;
+      font-weight: bold
+    }
+    input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #6699cc;
+      font-size: 1.5rem;
+      margin: 5px;
+      width: 50%;
+      font-weight: bold
+    }
+    span {
+      color: #CD5C5C;
+      border: 2px solid #CD5C5C;
+      padding: 2px 5px 2px 5px; 
+      text-transform: uppercase;
+    }
+
+  `
 
 export default function DriverLogin() {
   const { register, handleSubmit, watch, errors } = useForm()
@@ -25,9 +51,10 @@ export default function DriverLogin() {
 
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
-      <StyledLabel>First Name</StyledLabel>
-      <input name="firstName" ref={register({ required: true })} />
+      <label>First Name</label>
       {errors.firstName && <span>first name is required</span>}
+      <input name="firstName" ref={register({ required: true })} />
+      
 
       <label>Last Name</label>
       <input name="lastName" ref={register({ required: true })} />
@@ -45,7 +72,8 @@ export default function DriverLogin() {
       <input name="Password" ref={register({ required: true })} />
       {errors.password && <span>password is required</span>}
 
-      <input type="submit" />
+      <input name="submitForm" type="submit" />
+      {errors.any && <span>Oops! You're missing a field. Check above</span>}
     </StyledForm>
   )
 }
