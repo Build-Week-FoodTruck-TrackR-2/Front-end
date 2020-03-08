@@ -25,6 +25,7 @@ const StyledLink = styled(Link)`
 export default function WelcomePage() {
   return (
     <section className="welcome">
+
       <LinkDiv>
          
               <StyledLink to = '/driver-login'>DRIVERS</StyledLink>

@@ -13,14 +13,23 @@ const StyledNavLink = styled(NavLink)`
   color: palevioletred;
   font-weight: bold;
   text-decoration: none;
+
+  &.selected {
+      font-weight: bold;
+      font-style: italic;
+      padding: 0 5px 0 5px;
+      border: 1px solid #CD5C5C; 
+  }
 `
 
 
 const Navigation = () => {
     return (
         <NavLinks>
-            <StyledNavLink to="/"> Home </StyledNavLink>
-            <StyledNavLink to="/register"> Register </StyledNavLink>
+            <StyledNavLink activeClassName="selected" exact to="/"> Home </StyledNavLink>
+            <StyledNavLink activeClassName="selected" exact to="/driver-login"> Drivers </StyledNavLink>
+            <StyledNavLink activeClassName="selected" exact to="/foodie-login"> Foodies </StyledNavLink>
+            <StyledNavLink activeClassName="selected" exact to="/register"> Register </StyledNavLink>
         </NavLinks>
     );
 };

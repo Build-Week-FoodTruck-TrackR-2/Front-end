@@ -43,6 +43,18 @@ export default function DriverLogin() {
     const { register, handleSubmit, watch, errors } = useForm()
     const onSubmit = data => {console.log(data)}
 
+    // APPLY WHEN DATABASE CALL IS READY 
+    
+    // const onSubmit = async data => {
+    //     if (data.password === data.confirmpassword) {
+    //         setUserCredentials({
+    //             'username': data.username,
+    //             'password': data.password,
+    //             'email': data.email
+    //         })
+    //     }
+    // }
+
     console.log(watch('example'))
 
     return (

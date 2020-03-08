@@ -6,9 +6,10 @@ import axios from 'axios'
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
-  padding: 0;
+  margin: 10% 25% 0 25%;
+  padding: 0 0 10px 0;
   align-items: center;
+  border: 3px solid #CD5C5C; 
 
     label{
       display: flex;
