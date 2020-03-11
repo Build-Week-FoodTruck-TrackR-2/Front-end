@@ -7,7 +7,9 @@ const LinkDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 25px 25px 25px 25px
+    margin: 25px 25px 25px 25px;
+    
+
 `;
 
 const StyledLink = styled(Link)`
@@ -20,6 +22,12 @@ const StyledLink = styled(Link)`
   border: 2px solid palevioletred;
   border-radius: 3px;
   margin-top: 15px;
+
+  &:hover {
+    color: #6699cc;
+    border: 2px solid #6699cc;
+  }
+  
 `
 
 export default function WelcomePage() {
@@ -27,13 +35,17 @@ export default function WelcomePage() {
     <section className="welcome">
 
       <LinkDiv>
-         
-              <StyledLink to = '/driver-login'>DRIVERS</StyledLink>
-   
- 
-              <StyledLink to = '/foodie-login'>FOODIES</StyledLink>
- 
+    
+
+        <StyledLink to = '/driver-login'>DRIVERS</StyledLink>
       </LinkDiv>
+   
+      <LinkDiv>
+
+              <StyledLink to = '/foodie-login'>FOODIES</StyledLink>
+      </LinkDiv>
+
+ 
     </section>
   );
 }

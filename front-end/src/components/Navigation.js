@@ -18,8 +18,13 @@ const StyledNavLink = styled(NavLink)`
       font-weight: bold;
       font-style: italic;
       padding: 0 5px 0 5px;
-      border: 1px solid #CD5C5C; 
+      border: 1px solid #6699cc; 
   }
+
+  &:hover {
+    color: #6699cc;
+  }
+  
 `
 
 
@@ -28,6 +33,7 @@ const Navigation = () => {
         <NavLinks>
             <StyledNavLink activeClassName="selected" exact to="/"> Home </StyledNavLink>
             <StyledNavLink activeClassName="selected" exact to="/driver-login"> Drivers </StyledNavLink>
+            <StyledNavLink activeClassName="selected" exact to="/lookup"> SEARCH FOR A TRUCK </StyledNavLink>
             <StyledNavLink activeClassName="selected" exact to="/foodie-login"> Foodies </StyledNavLink>
             <StyledNavLink activeClassName="selected" exact to="/register"> Register </StyledNavLink>
         </NavLinks>
